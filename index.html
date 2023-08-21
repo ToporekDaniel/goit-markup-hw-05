@@ -41,7 +41,7 @@
   <main>
     <div class="heroimage">
       <h1 class="hero-title">Effective Solutions for Your Business</h1>
-      <button type="button">Order Service</button>
+      <button type="button" data-modal-open>Order Service</button>
     </div>
 
     <section class="info">
@@ -388,7 +388,13 @@
       </div>
     </div>
   </footer>
+  <div class=" backdrop is-hidden" data-modal>
+    <div class="modal-box">
+      <button type="modal-close" data-modal-close>x</button>
+    </div>
+  </div>
   <script src="./js/modal.js"></script>
+
 </body>
 
 </html>
