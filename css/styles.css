@@ -397,12 +397,15 @@ footer {
   column-gap: 24px;
 }
 .project-card-text {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 32px 16px;
+  background: var(--white, #fff);
   border: 1px solid var(--cornflower, #e7e9fc);
   border-top: 0;
+  z-index: 2;
 }
 
 .project-card img {
@@ -410,6 +413,8 @@ footer {
 }
 
 .project-card {
+  position: relative;
+  overflow: hidden;
   background: var(--white, #fff);
   transition: var(--transition);
 }
@@ -419,6 +424,23 @@ footer {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.project-card:focus .hover-text,
+.project-card:hover .hover-text {
+  top: 0;
+}
+
+.hover-text {
+  position: absolute;
+  width: 360px;
+  height: 300px;
+  padding: 40px 32px;
+  background-color: var(--iris);
+  color: var(--cloud);
+  transition: var(--transition);
+  top: 100%;
+  z-index: 1;
 }
 
 .idea {
