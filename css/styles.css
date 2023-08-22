@@ -546,10 +546,42 @@ footer {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
   margin: 50px auto;
+  transition: var(--transition);
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.modal-close-button {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: absolute;
+  inset: 24px 24px auto auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: var(--cornflower, #e7e9fc);
+  transition: var(--transition);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background: var(--ocean);
+}
+
+.modal-close-icon {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  margin: auto;
+  transition: var(--transition);
+}
+
+.modal-close-button:hover .modal-close-icon,
+.modal-close-button:focus .modal-close-icon {
+  fill: white;
 }
